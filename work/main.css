@@ -1,0 +1,212 @@
+/* DOCUMENT INFORMATION
+	- Document: Personal portfolio CSS
+	- Version:  Alpha
+	- Client:   P. Luczynski
+	- Author:   P. Luczynski
+*/
+
+/* COLORS
+    - default body text  #000000 - black
+    - nav & btn hover bg #000000 - black
+    - default background #ffffff - white
+    - btn hover & nav    #111111 - blackish
+*/
+
+/* FONTS
+	- h2 & h1 - Ubuntu, sans-serif
+	- Default   - Montserrat, sans-serif
+*/
+
+/* CSS DIRECTORY
+	1. =GLOBAL  (reset)
+	2. =PRIMARY (body & particles.js)
+	3. =HEADER  (header, h1 & h2)
+	4. =NAVBAR
+    5. =FOOTER  (buttons)
+    6. =QUERIES
+*/
+
+/* ===GLOBAL=== */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+canvas {
+    display: block;
+}
+
+/* ===PRIMARY=== */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+/* ===HEADER=== */
+
+header {
+    opacity: 0;
+    transition: all 0.6s;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 3%;
+    position: relative;
+}
+header h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    padding-top: 5vh;
+}
+header p {
+    font-size: 3rem;
+    font-weight: 300;
+}
+header .icons a{
+    color: #000000;
+    position: fixed;
+}
+header .icons a:hover{
+    transform: scale(1.3);
+    transition: all 0.3s linear;
+}
+header .codepen{
+    left: 12%;
+}
+/* ===NAVBAR=== */
+
+.navbar-toggler {
+    color: #000000;
+    position: fixed;
+    display: block;
+    right: -50%;
+    top: 1vh;
+    transition: all 0.5s linear;
+    z-index: 6;
+}
+.navbar ul {
+    background-color: #000000;
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: -50vw;
+    transition: all 0.25s linear;
+    z-index: 5;
+}
+.navbar ul a {
+    color: #ffffff;
+    font-size: 3rem;
+    height: 15vh;
+}
+.navbar ul a:hover {
+    transform: scale(1.3);
+    transition: all 0.5s;
+}
+
+/* ===FOOTER=== */
+
+footer {
+    z-index: 4;
+    padding: 5vh;
+    position: fixed;
+    bottom: -60vh;
+    transition: all 0.3s linear;
+}
+footer .btn {
+    color: #000000;
+    font-size: 3rem;
+    border: 1px solid #000000;
+    padding: 1rem;
+    margin: 0 1rem;
+    transition: all 0.4s; 
+    display: block;
+    float: left;  
+    text-align: center;
+}
+footer a.btn:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transition: all 0.5s;
+    transform: scale(1.3);
+}
+
+/* ===QUERIES=== */
+
+/*Widths*/
+@media only screen and (max-width: 1600px) {
+    :root{
+        font-size: 12px;
+    }
+    header .codepen{
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    :root{
+        font-size: 10px;
+    }
+    header h1{
+        font-size: 8rem;
+    }
+    footer .btn{
+        float: none;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .navbar ul{
+        width: 100%;
+        right: -100vw;
+    }
+    header p{
+        font-size: 3rem;
+    }
+    header .codepen{
+        left: 23%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    header h1{
+        font-size: 6rem;
+    }
+    footer a.btn{
+        text-align: center;
+        margin-left: 3%;
+    }
+    header .codepen{
+        left: 25%;
+    }
+}
+@media only screen and (max-width: 340px) {
+    :root{
+        font-size: 8px;
+    }
+}
+/*Heights*/
+@media only screen and (max-height: 480px) {
+    :root{
+        font-size: 5.75px;
+    }
+    nav ul{
+        width: 50%;
+    }
+}
+@media only screen and (max-height: 370px) {
+    :root{
+        font-size: 4px;
+    }
+}
+
+/* A mind needs books like a sword needs a whetstone */
